@@ -13,6 +13,12 @@ Command Line Tasks
 
 `npm run heroku` -- Pushed to Heroku app
 
+
+Htpasswd Generator – Create htpasswd
+-------------
+[http://www.htaccesstools.com/htpasswd-generator/](http://www.htaccesstools.com/htpasswd-generator/)
+
+
 Heroku:
 -------------
 [wright-real-estate-website.herokuapp.com](http://wright-real-estate-website.herokuapp.com/) 
