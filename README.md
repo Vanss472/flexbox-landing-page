@@ -15,4 +15,8 @@ Command Line Tasks
 
 Heroku:
 -------------
-[wright-real-estate-website.herokuapp.com](http://wright-real-estate-website.herokuapp.com/)  
+[wright-real-estate-website.herokuapp.com](http://wright-real-estate-website.herokuapp.com/) 
+
+`username: wright`
+
+`password: 2015Brothers`
