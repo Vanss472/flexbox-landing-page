@@ -1,0 +1,142 @@
+$bar-width: 60px;
+$bar-height: 10px;
+
+$mobile-bar-width: 45px;
+$mobile-bar-height: 7px;
+
+$bar-color: map_get($colors, "white");
+$animation-speed: .3s;
+
+ 
+
+%bar-line {
+    width: $bar-width;
+    height: $bar-height;
+    background: $bar-color;
+    transition: all $animation-speed ease-in-out;
+    cursor: pointer;
+}
+
+// .menu-toggle { 
+//     display: block;
+//     cursor: pointer;
+
+//     position: absolute;
+//     width: $bar-width;
+//     height: $bar-height * 5;
+//     top: 30px;
+//     left: 30px;
+
+//     transition: all 0.4s ease-in-out;
+
+//     &.is-active {
+//         .bar { 
+//             background: none; 
+
+//             &:before,
+//             &:after {
+//                 top: 0;
+//             }
+//             &:before {
+//                 transform: rotate(-45deg);
+//             }
+//             &:after {
+//                 transform: rotate(45deg);
+//             }
+
+//             &:hover {
+//                 transform: rotate(90deg);
+//             }
+//         } 
+//     }
+//     &:hover:not(.is-active) {
+//         .bar {
+//             &:before { top: -($bar-height * 2.5); }
+//             &:after { top: $bar-height * 2.5; }
+//         }
+//     } 
+// }
+
+// .bar {
+//     @extend %bar-line;
+
+//     position: relative;
+//     margin: $bar-height * 2 auto 0;
+
+//     &:before,
+//     &:after {
+//         @extend %bar-line;
+
+//         content: "";
+//         position: absolute;
+//     }
+
+//     &:before { top: -($bar-height * 2); }
+//     &:after { top: $bar-height * 2; }
+// }
+
+
+@include tablet() {
+%mobile-bar-line {
+    width: $mobile-bar-width;
+    height: $mobile-bar-height;
+    background: $bar-color;
+    transition: all $animation-speed;
+    cursor: pointer;
+}
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+
+        position: absolute;
+        width: $mobile-bar-width;
+        height: $mobile-bar-height * 5;
+        top: 15px;
+        right: 10px;
+
+        transition: all 0.4s ease-in-out;
+        &.is-active {
+            .bar { 
+                background: none; 
+
+                &:before,
+                &:after {
+                    top: 0;
+                }
+                &:before {
+                    transform: rotate(-45deg);
+                }
+                &:after {
+                    transform: rotate(45deg);
+                }
+
+                &:hover {
+                    // transform: rotate(90deg);
+                }
+            } 
+        }
+        
+        &:hover:not(.is-active) {
+            .bar {
+                &:before { top: -($mobile-bar-height * 2.5); }
+                &:after { top: $mobile-bar-height * 2.5; }
+            }
+        }
+    }
+
+    .bar {
+        @extend %mobile-bar-line;
+
+        position: relative;
+        margin: $mobile-bar-height * 2 auto 0;
+        &:before,
+        &:after {
+            @extend %mobile-bar-line;
+            content: "";
+            position: absolute; 
+        }
+
+        &:before { top: -($mobile-bar-height * 2); }
+        &:after { top: $mobile-bar-height * 2; } 
+    }       
+}

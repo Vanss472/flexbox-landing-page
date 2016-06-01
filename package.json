@@ -1,0 +1,41 @@
+{
+  "name": "wright-real-estate-website",
+  "description": "Real Estate Website",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.org:johnmcneilstudio/wright-real-estate-website.git"
+  },
+  "author": "John McNeil Studio",
+  "license": "BSD", 
+  "engines": {
+    "node": "0.10.x" 
+  },
+  "devDependencies": {
+    "broccoli": "^0.13.3",
+    "broccoli-autoprefixer": "^3.0.0",
+    "broccoli-es6-transpiler": "^1.0.1",
+    "broccoli-fast-browserify": "0.2.5",
+    "broccoli-cli": "^1.0.0",
+    "broccoli-env": "0.0.1", 
+    "broccoli-imagemin": "^0.2.1",
+    "broccoli-jshint": "^0.5.5",
+    "broccoli-merge-trees": "^0.2.1", 
+    "broccoli-sass": "^0.3.3",
+    "broccoli-static-compiler": "^0.2.1",
+    "broccoli-svgstore": "^0.1.0" 
+  },
+  "dependencies": {
+    "dot": "^1.0.3",
+    "express": "^4.12.3",
+    "http-auth": "*",
+    "jquery": "^2.1.3",
+    "underscore": "^1.8.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist && broccoli build dist",
+    "develop": "broccoli serve",
+    "heroku": "git push heroku master",
+    "start": "node ./server.js"
+  }
+}

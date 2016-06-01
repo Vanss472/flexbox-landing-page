@@ -1,0 +1,10 @@
+$hrColor: ("black": #000000, "lightGrey": #c2c1b1);
+@each $colorName, $borderColor in $hrColor {
+	.clean-hr-#{$colorName} {
+	  border: none;
+	  width: 38px;
+	  border-top: 2px solid $borderColor;
+	  margin-top: 30px;
+	  margin-bottom: 40px; 
+	}
+}

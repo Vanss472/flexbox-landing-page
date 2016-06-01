@@ -1,0 +1,81 @@
+.button {
+	display: block; 
+
+	transition-property: background-color, color;
+	transition-duration: 0.3s;
+
+	border-radius: $border-radius;
+
+	padding: 15px;
+	
+	font-family: $base-font;
+	font-size: $baseline-rem;
+	line-height: $baseline-lineheight; 
+
+	text-decoration: none;
+	text-align: center;
+	
+	cursor: pointer;
+
+	background-color: $site-highlight;
+	color: $site-color;
+
+	border: none;
+	
+	&:hover { 
+		background-color: $site-hover; 
+		color: $site-color; 
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	@for $i from 1 through 100 {
+		&.button-#{$i} {
+			width: $i * 1%;
+		}
+	}
+
+}
+
+//button wrapper
+@for $i from 1 through 300 {
+	.button-wrapper-#{$i} {
+		width: $i + px;
+	}
+}
+
+// button transparent
+.button-alt {
+	@extend .button;
+	background-color: rgba(255, 255, 255, 0.29);
+	border: 2px solid $site-color;
+	color: $site-color;
+
+	&:hover {
+		background-color: $site-hover;
+		color: $site-color;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+//white outline
+.white-outline-btn {
+	@extend .button;
+	background-color: transparent;
+	border: 1px solid map_get($colors, "white");
+	color: map_get($colors, "white");
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: rgba(255, 255, 255, 0.29);
+		color: map_get($colors, "white");
+	}
+}
+
+
+

@@ -1,0 +1,17 @@
+.module-one {
+	padding: 7em 0;
+	color: map_get($colors, "grey");
+}
+
+@include phone() {
+	.module-one {
+		padding: 3em 0;
+
+		.slice {
+	        .slice-item {
+	            display: block;
+	            width: 100%;
+	        }
+	    }
+	}
+}

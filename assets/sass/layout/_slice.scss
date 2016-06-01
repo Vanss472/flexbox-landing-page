@@ -1,0 +1,54 @@
+.slice {
+	display: table;
+	width: 100%;
+
+	@for $i from 1 through 100 {
+        .slice-#{$i} { 
+            width: $i * 1%; 
+        }
+    }
+	
+	&.slice-fixed {
+        table-layout: fixed;
+    }
+
+	.slice-item {
+		display: table-cell;
+	}
+}
+
+
+//space between
+.slice-gutter {
+    > .slice-item {
+        padding: 1rem;
+
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+
+//align
+.slice-align-top {
+    vertical-align: top;
+}
+.slice-align-middle {
+    vertical-align: middle;
+}
+.slice-align-bottom {
+    vertical-align: bottom;
+}
+
+@include phone() {
+    .slice-gutter {
+        .slice-item {
+            margin: 0.5rem 0 0.5rem 0;
+            padding: 0;
+        }
+    }
+}

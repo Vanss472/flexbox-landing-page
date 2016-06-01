@@ -1,0 +1,16 @@
+.text-align-center {
+	text-align: center;
+}
+
+.centered {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+ 
+
+//color
+.lightGrey {
+	color: map_get($colors, lightGrey);
+}

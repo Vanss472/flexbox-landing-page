@@ -1,0 +1,35 @@
+.wrapper {
+	max-width: $full + px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wrapper-md {
+	max-width: $tablet + px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wrapper-sml {
+	max-width: $phone + px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@include full() {
+	.wrapper {
+		padding: 0 $spacing-quad;
+	}
+}
+
+@include tablet() {
+	.wrapper {
+		padding: 0 $spacing-double;
+	}
+}
+
+@include phone() {
+	.wrapper {
+		padding: 0 $spacing;
+	}
+}
