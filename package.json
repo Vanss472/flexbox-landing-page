@@ -29,7 +29,7 @@
     "dot": "^1.0.3",
     "express": "^4.12.3",
     "http-auth": "*",
-    "jquery": "^2.1.3",
+    "jquery": "^3.0.0",
     "underscore": "^1.8.1"
   },
   "scripts": {
